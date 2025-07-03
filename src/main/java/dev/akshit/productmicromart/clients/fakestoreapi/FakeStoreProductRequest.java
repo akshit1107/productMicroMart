@@ -1,4 +1,4 @@
-package dev.akshit.productmicromart.dtos.request;
+package dev.akshit.productmicromart.clients.fakestoreapi;
 
 import lombok.Getter;
 import lombok.Setter;

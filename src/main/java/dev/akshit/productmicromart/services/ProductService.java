@@ -1,17 +1,23 @@
 package dev.akshit.productmicromart.services;
 
 import dev.akshit.productmicromart.dtos.request.ProductRequest;
+import dev.akshit.productmicromart.models.Product;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
 
 public interface ProductService {
 
-    String getAllProducts();
+    List<Product> getAllProducts();
 
-    String getProduct(Long productId);
+    Optional<Product> getProduct(Long productId);
 
-    String addProduct(ProductRequest productRequest);
+    Product addProduct(ProductRequest productRequest);
 
-    String updateProduct(Long id);
+    Product updateProduct(Long productId, Product product);
 
-    String deleteProduct(Long id);
+    Product replaceProduct(Long productId, Product product);
+
+    boolean deleteProduct(Long productId);
 }
